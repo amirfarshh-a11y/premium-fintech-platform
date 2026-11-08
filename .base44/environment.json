@@ -1,0 +1,18 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "JWT_SECRET",
+      "description": "Secret used to sign session cookies for Aurum accounts.",
+      "requiredAtBoot": true,
+      "generatedForDevelopment": true
+    },
+    {
+      "name": "COINGECKO_API_KEY",
+      "description": "Optional CoinGecko demo API key. Live market data works without it at the public rate limit; add a key from coingecko.com/en/developers/dashboard for reliable polling.",
+      "requiredAtBoot": false
+    }
+  ]
+}
